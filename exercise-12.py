@@ -6,8 +6,12 @@ def calculate_income_tax(taxable_income):
         tax_payable = taxable_income * 0
 
     # If taxable income is between $10,001 and $20,000
+    elif taxable_income <= 20000:
+        tax_payable = (taxable_income - 10000) * 0.10
         
     # If taxable income is above $20,000
+    else:
+        tax_payable = 10000 * 0.10 + (taxable_income - 20000) * 0.20
 
 # Given
 
